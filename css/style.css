@@ -7,14 +7,15 @@
 }
 
 .container {
-	max-width: 100%;
+	min-width: 900px;
 	height: 100vh;
 	overflow: hidden;
+	font-size: 20px;
 }
 
 li {
 	list-style-type: none;
-	font-size: 16px;
+	font-size: 0.8em;
 }
 
 .leftColumn {
@@ -70,6 +71,7 @@ li i {
 	color: #0c0;
 	position: relative;
 	top: 5px;
+	right: 5%;
 }
 
 #personList li:hover {
@@ -97,7 +99,7 @@ li:hover+.fadeBlock {
 	transform: scale(1.2);
 }
 .active i {
-	transform: scale(1.2) translateX(-80%);
+	transform: scale(1.2) translateX(-60%);
 }
 
 .topPersonRow, .middlePersonRow, .bottomPersonRow {
@@ -141,6 +143,7 @@ li:hover+.fadeBlock {
 	border-radius: 50%;
 	text-align: center;
 	line-height: 35px;
+	font-size: 0.9em;
 }
 
 #page span:hover, .press {
@@ -149,11 +152,11 @@ li:hover+.fadeBlock {
 }
 
 h1 {
-	font-size: 20px;
+	font-size: 1em;
 } 
 
 h2 {
-	font-size: 18px;
+	font-size: 0.9em;
 }
 
 a {
@@ -165,44 +168,44 @@ a:hover {
 }
 
 .preloaderContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-  padding: 5px;
-  overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	padding: 5px;
+	overflow: hidden;
 }
 .green {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid #0f0;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: green 1s linear infinite;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 2px solid #0f0;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: green 1s linear infinite;
 }
 
 .red {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid #f00;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: red 0.5s linear infinite;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 2px solid #f00;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: red 0.5s linear infinite;
 }
 
 .blue {
-  width: 50px;
-  height: 50px;
-  border-top: 2px solid #00f;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: blue 0.5s linear infinite;
+	width: 50px;
+	height: 50px;
+	border-top: 2px solid #00f;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: blue 0.5s linear infinite;
 }
 
 @keyframes green {
@@ -224,10 +227,62 @@ a:hover {
 }
 
 @keyframes blue {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media(max-width: 899px) {
+	.container {
+		min-width: 700px;
+		font-size: 16px;
+	}
+	.rightColumn {
+		padding: 30px 10px 20px 10px;
+	}
+	.topPersonRow, .middlePersonRow, .bottomPersonRow {
+		padding: 0 20px;
+	}
+	.topPersonRow {
+		flex-basis: 200px;
+	}
+}
+@media(max-width: 699px) {
+	.container {
+		min-width: 400px;
+		font-size: 13px;
+	}
+	.rightColumn {
+		padding: 20px 10px 20px 10px;
+	}
+	.topPersonRow, .middlePersonRow, .bottomPersonRow {
+		padding: 0;
+	}
+	.topPersonRow {
+		flex-basis: 150px;
+	}
+	.active i {
+		transform: scale(1.2) translateX(-10%);
+	}
+}
+@media(max-width: 545px) {
+	.container {
+		min-width: 425px;
+		font-size: 10px;
+	}
+	li i {
+		padding-right: 5px;
+	}
+}
+@media(max-width: 424px) {
+	.container {
+		min-width: 280px;
+		font-size: 6px;
+	}
+	li i {
+		padding-right: 5px;
+	}
 }
